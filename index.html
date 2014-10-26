@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Interest Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Simple Interest Calculator">
+  <meta name="author" content="dnafrance">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Simple Interest Calculator</h1>
+    <h2>RStudio Shiny application</h2>
+    <p>dnafrance<br/>Course Project in &quot;Coursera - Developing Data Products&quot;</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is an RStudio shiny application developed as a course project for Coursera&#39;s <strong>Developing Data Products</strong> course in the <em>Data Science Specialization</em> track.  </p>
+
+<p>The application developed is a <strong>simple interest calculator</strong>.  </p>
+
+<h3>Course project requirements</h3>
+
+<p>The course project requirements for this application are:</p>
+
+<ul>
+<li>Some form of input (widget: textbox, radio button, checkbox, ...)</li>
+<li>Some operation on the ui input in sever.R</li>
+<li>Some reactive output displayed as a result of server calculations</li>
+<li>You must also include enough documentation so that a novice user could use your application.</li>
+<li>The documentation should be at the Shiny website itself. Do not post to an external link.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Application - Widgets</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The shiny application for this project is a <a href="https://dnafrance.shinyapps.io/devdatapdt/">simple interest calculator</a>.<br>
+It includes 4 widgets:  </p>
+
+<ol>
+<li><strong>numericInput</strong> - A field to enter numbers, in this case - the principal amount (in $)<br></li>
+<li><strong>sliderInput</strong> - A slider bar
+
+<ul>
+<li>First slider is to choose the yearly interest rate (in %)</li>
+<li>Second slider is to choose the number of time periods<br></li>
+</ul></li>
+<li><strong>selectInput</strong> - A box with choices to select from, in this case - the type of time period: years, quarters or months<br></li>
+<li><strong>actionButton</strong> - A Action Button, in this case to provide non-reactive reactivity to refresh and calculate</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Application - Operations and Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>To prevent undue distraction, the reactivity of the shiny application widgets is controlled by using an actionButton. Based on user inputs, and using the simple interest calculation equation, the application displays:<br>
+1. Inputs entered by the user<br>
+2. Calculated values<br>
+ a. Simple interest calculated<br>
+ b. Total amount calculated as principal plus interest  </p>
+
+<p>The simple interest calculation equation is:<br>
+<strong>A = P + I = P(1 + rt) ; R = r * 100</strong><br>
+where:<br>
+A = Total amount (Principal + Interest), P = Principal amount, I = Interest amount, r = Rate of interest per year, in decimal; r=R/100, t = Time period invested in years/quarters/months    </p>
+
+<p>Even though it is a simple application, to make it easy for the novice user, the <strong>Documentation</strong> tab in the mainPanel of the application lists the details of the calculation of simple interest.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Application - Link and Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Try out the application on the RStudio shinyapps.io website:<br>
+<a href="https://dnafrance.shinyapps.io/devdatapdt/">https://dnafrance.shinyapps.io/devdatapdt/</a> </p>
+
+<p>To see the code for the application, visit github website:<br>
+<a href="https://github.com/dnafrance/DevDataPdt">https://github.com/dnafrance/DevDataPdt</a>  </p>
+
+<p>Useful files in repo:  </p>
+
+<ul>
+<li><code>server.R</code></li>
+<li><code>ui.R</code></li>
+</ul>
+
+<p>To execute the application and see the code in action, use:<br>
+<code>runApp(displayMode = &#39;showcase&#39;)</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application - Widgets'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application - Operations and Output'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Application - Link and Code'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
